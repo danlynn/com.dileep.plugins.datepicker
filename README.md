@@ -4,34 +4,17 @@
 
 1) Make sure that you have [Node](http://nodejs.org/) and [Cordova CLI](https://github.com/apache/cordova-cli) or [PhoneGap's CLI](https://github.com/mwbrooks/phonegap-cli) or [Cordova Plugman](https://github.com/apache/cordova-plugman/) installed on your machine.
 
-2) Add a plugin to your project using [Cordova CLI](https://github.com/apache/cordova-cli):
-
-```bash
-cordova plugin add https://github.com/witpok/com.dileep.plugins.datepicker
-```
-
-Or using [PhoneGap CLI](https://github.com/mwbrooks/phonegap-cli):
+2) Add a plugin to your project using [PhoneGap CLI](https://github.com/mwbrooks/phonegap-cli):
 
 ```bash
 phonegap local plugin add https://github.com/witpok/com.dileep.plugins.datepicker
 ```
-3a) Register plugin within `config.xml` of your app
+3) Make sure, that your plugin is within `config.xml` of your app
 Android
 ```xml
 <feature name="DatePicker">
     <param name="android-package" value="com.dileep.plugins.datepicker.DatePickerPlugin"/>
 </feature>
-```
-iOS
-```xml
-<feature name="DatePicker">
-    <param name="ios-package" value="DatePicker"/>
-</feature>
-```
-3b) If you are using [PhoneGap build service](https://build.phonegap.com/) add to `config.xml`
-
-```xml
-<gap:plugin name="com.dileep.plugins.datepicker" />
 ```
 
 4) The `clobber` definition of the plugin is called `datePicker`. So you can reference to the plugin from anywhere in your code.
@@ -40,6 +23,8 @@ Example:
 
 ```js
 // defining options
+var datePicker = new DatePicker();
+
 var options = {
   date: new Date(),
   mode: 'date'
@@ -48,6 +33,11 @@ var options = {
 datePicker.show(options, function(date){
   console.log("date result " + date);  
 });
+```
+
+5) include `DatePicker.js` to your `index.html`, for example: 
+```html
+<script type="text/javascript" src="js/DatePicker.js"></script>
 ```
 
 Check section ["Options"](#options) below to see all options.
