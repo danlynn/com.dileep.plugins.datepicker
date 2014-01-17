@@ -1,5 +1,5 @@
-# DatePicker Plugin for android and ios using PhoneGap / Cordova 3.3
-
+# DatePicker Plugin for android using PhoneGap / Cordova 3.3
+## ios not checked yet
 ## Installation
 
 1) Make sure that you have [Node](http://nodejs.org/) and [Cordova CLI](https://github.com/apache/cordova-cli) or [PhoneGap's CLI](https://github.com/mwbrooks/phonegap-cli) or [Cordova Plugman](https://github.com/apache/cordova-plugman/) installed on your machine.
@@ -35,7 +35,7 @@ datePicker.show(options, function(date){
 });
 ```
 
-5) include `DatePicker.js` to your `index.html`, for example: 
+5) include `DatePicker.js` in your `index.html`, for example: 
 ```html
 <script type="text/javascript" src="js/DatePicker.js"></script>
 ```
