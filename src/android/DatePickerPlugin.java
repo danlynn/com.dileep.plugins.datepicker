@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
-import android.app.TimePickerDialog;
+import android.app.TimePickerDialog; 
 import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
 import android.util.Log;
@@ -32,8 +32,8 @@ import org.apache.cordova.CordovaPlugin;
  */
 public class DatePickerPlugin extends org.apache.cordova.CordovaPlugin{
 
-    private static final String ACTION_DATE = "date";
-    private static final String ACTION_TIME = "time";
+    private static final String ACTION_DATE = "date";  
+    private static final String ACTION_TIME = "time"; 
     private final String pluginName = "DatePickerPlugin";
 
     @Override
