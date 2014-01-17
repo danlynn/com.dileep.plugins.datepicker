@@ -1,4 +1,5 @@
-/**
+//cordova.define("com.dileep.plugins.datepicker.DatePicker", function(require, exports, module) {
+	/**
  * Phonegap DatePicker Plugin
  * https://github.com/kdileep1990/com.dileep.plugins.datepicker
  *
@@ -6,14 +7,14 @@
  * Reused and ported to Android plugin by Daniel van 't Oever
  *
  * Rewrite by Dileep
+ * 
+ * Rewrite by witpok
  */
-var exec = require('cordova/exec');
 
 /**
  * Constructor
  */
 function DatePicker() {
-    this._callback;
 }
 
 /**
@@ -37,7 +38,7 @@ DatePicker.prototype.show = function(options, cb) {
     }
     this._callback = cb;
 
-    return exec(cb, failureCallback, 'DatePickerPlugin', defaults.mode, new Array(defaults));
+    cordova.exec(cb, failureCallback, 'DatePickerPlugin', defaults.mode, new Array(defaults));
 };
 
 DatePicker.prototype._dateSelected = function(date) {
@@ -53,5 +54,6 @@ function failureCallback(err) {
 /**
  * Load DatePicker
  */
-var datePicker = new DatePicker();
-module.exports = datePicker;
+
+//module.exports = datePicker; - instead you need to include it in index.html
+//});
