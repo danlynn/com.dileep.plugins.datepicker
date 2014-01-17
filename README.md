@@ -1,4 +1,4 @@
-# DatePicker Plugin for android and ios using PhoneGap / Cordova 3.0
+# DatePicker Plugin for android and ios using PhoneGap / Cordova 3.3
 
 ## Installation
 
@@ -7,13 +7,13 @@
 2) Add a plugin to your project using [Cordova CLI](https://github.com/apache/cordova-cli):
 
 ```bash
-cordova plugin add https://github.com/kdileep1990/com.dileep.plugins.datepicker
+cordova plugin add https://github.com/witpok/com.dileep.plugins.datepicker
 ```
 
 Or using [PhoneGap CLI](https://github.com/mwbrooks/phonegap-cli):
 
 ```bash
-phonegap local plugin add https://github.com/kdileep1990/com.dileep.plugins.datepicker
+phonegap local plugin add https://github.com/witpok/com.dileep.plugins.datepicker
 ```
 3a) Register plugin within `config.xml` of your app
 Android
